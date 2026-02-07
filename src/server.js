@@ -425,6 +425,9 @@ app.get("/setup/api/status", requireSetupAuth, async (_req, res) => {
       { value: "minimax-api", label: "MiniMax M2.1" },
       { value: "minimax-api-lightning", label: "MiniMax M2.1 Lightning" }
     ]},
+    { value: "mistral", label: "Mistral", hint: "API key", options: [
+      { value: "mistral-api-key", label: "Mistral API key" }
+    ]},
     { value: "qwen", label: "Qwen", hint: "OAuth", options: [
       { value: "qwen-portal", label: "Qwen OAuth" }
     ]},
@@ -488,6 +491,7 @@ function buildOnboardArgs(payload) {
       "zai-api-key": "--zai-api-key",
       "minimax-api": "--minimax-api-key",
       "minimax-api-lightning": "--minimax-api-key",
+      "mistral-api-key": "--mistral-api-key",
       "synthetic-api-key": "--synthetic-api-key",
       "opencode-zen": "--opencode-zen-api-key"
     };
